@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>christlove/Praise-party</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+.navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: static;
+    background-color: transparent;
+}
+.logo{
+    width: 79px;
+    cursor: pointer;
+    margin: 30px 0;
+    margin-left: 15px;
+    border-radius: 50%;
+
+}
+.menu-icon{
+    width: 30px;
+    cursor: pointer;
+    display: none;
+    margin-right: 10px;
+
+}
+.title1{
+    display: none;
+    font-size: 20px;
+    padding-left: 10px;
+    text-align: center;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+nav ul li a:hover{
+    color: #c47208;
+}
+.heading{
+    text-align: center;
+    letter-spacing: 2px;
+    font-family: 'Times New Roman';
+}
+.heading hr{
+    margin-left: 41%;
+    width: 6%;
+}
+.heading span{
+    color: #c47208;
+}
+.media-plus h5{
+    display: none;
+}
+.heading h5{
+    display: block;
+    color: #c47208;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 10px;
+    font-family: 'Times New Roman';
+}
+
+  .container{
+      width: 100%;
+      min-height: 100%;
+      box-sizing: border-box;
+      overflow: hidden;
+      background-color: #e3e3e3;
+      contain: content;
+  }
+ 
+
+
+  .socia-link img{
+    height: 25px;
+    margin: 20px;
+    cursor: pointer;
+   }
+   .socia-link{
+       text-align: center;
+       background-color: rgba(1, 1, 19, 0.973);
+       color: white;
+       margin-top: 20px;
+   }
+   .socia-link h5, a{
+       padding-top: 20px;
+       text-decoration: none;
+       color: white;
+   }
+
+
+
+@media only screen and (max-width:700px){
+    nav ul{
+        width: 100%;
+        background: linear-gradient(rgb(10, 4, 20), rgb(1, 1, 36));
+        position: absolute;
+        top: 60px;
+        right: 0;
+        z-index: 1;
+    }
+    nav ul li{
+        display: block;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+    nav ul li a{
+        color: #fff;
+    }
+    .menu-icon{
+        display: block;
+    }
+    #menuList{
+        overflow: hidden;
+        transition: 0.5s;
+    }
+    .title1{
+        display: block;
+        text-align: center;
+        align-items: center;
+        letter-spacing: 2PX;
+        font-family: 'Times New Roman';
+        margin-left: 25px;
+    }
+    .title1 span{
+        font-family: 'Times New Roman';
+        color: darkred;
+    }
+    .heading{
+        display: none;
+    }
+    .navbar{
+    height: 18vh;
+}
+.media-plus h5{
+    display: block;
+    color: darkred;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 14px;
+    font-family: 'Times New Roman';
+    }
+.heading h5{
+    display: none;
+}
+    
+}
+.coverss{
+    background-color: white;
+}
+.heading h2{
+    font-family: 'Times New Roman';
+}
+.heading hr{
+    margin-left: 42%;
+    width: 6%;
+}
+.slidee {
+  min-width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.tex-ctn h5{
+    display: block;
+    font-family: Garamond, serif ;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.tex-ctn {
+  width: 50%;
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1em;
+  font-size: 30px;
+  font-family: sans-serif;
+
+}
+.imag-ctn img{
+    border-radius: 50%;
+    width: 100%;
+    max-height: 100%;
+    margin-top: 10px;
+    margin-left: 8px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-style: italic;
+    font-family: fantasy;
+    margin-top: 30px;
+    margin-bottom: 100px;
+
+}
+.las-2 a{
+    border: 0;
+    padding: 10px 30px;
+    background: #86b0b6;
+    font-size: 18px;
+    border-radius: 5px;
+    color: #fff;
+    margin-left: 7%;
+}
+
+  @media only screen and (max-width:700px){
+    .imag-ctn img{
+      border-radius: 50%;
+      max-width: 90%;
+      min-height: 100vh;
+      align-items: center;
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: auto;
+    }
+    .slidee {
+  min-width: 100%;
+  height: 100%;
+  display: inline;
+  justify-content: center;
+  box-sizing: border-box;
+  text-align: center;
+  align-items: center;
+
+}
+
+.tex-ctn h5{
+    display: block;
+    font-family: Garamond, serif ;
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    align-items: center;
+    margin: 0%;
+    margin-right: 50px;
+}
+
+.tex-ctn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 30px;
+  margin-right: 10px;
+
+} 
+
+
+}
+    </style>
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <a href="index.html"><img src="images/6.png" class="logo"></a>
+
+            <h2 class="title1"> CHRIST<span>LOVE</span></h2>
+            <nav>
+                <ul id="menuList">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="audio.html">AUDIO</a></li>
+                    <!-- <li><a href="e-books.html">E-BOOks</a></li> -->
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+                <h2></h2>
+            </nav>
+            <img src="images/meni-icon.jpg" class="menu-icon" onclick="togglemenu()">
+        </div>
+
+        <div class="heading">
+            <h2> CHRIST<span>LOVE</span></h2>
+            <h5>...REJUVENATING MUSIC EXPERIENCE</h5>
+        </div>
+        <div class="media-plus">
+            <h5>...REJUVENATING MUSIC EXPERIENCE</h5>
+        </div>
+
+        <div class="coverss">
+
+
+            <div class="slidee">
+                <div class="imag-ctn">
+                  <img src="images/Felix Pato ft. Enoch D1.jpg" />
+                </div>
+                <div class="tex-ctn">
+                    <h3>PRAISE PARTY</h3><br>     
+                    <h5>             
+                        I will praise the name of God with a song, I will magnify him with thanksgiving.(Psalm 69:30) <br><br>Praise_Party is better described as gratitude sound. A song inspired by the biblical account of king David. A song of praise acknowleging God's unfailing love, mercy, and grace. <br><br>
+                        
+                        Download and Listen below.
+                      </h5>
+
+                      <div class="las-2">
+                        <!-- <h5>BIGGER EVERYDAY</h5> -->
+                        <audio src="music/Praise-party by Felix Pato ft Enoch D1 .mp3" controls></audio><br><br>
+                        <a href="music/Praise-party by Felix Pato ft Enoch D1 .mp3" download="">Download</a>
+                  </div>
+                </div>
+                
+              <!-- <div class="pdf">
+              <a href="e-book/Focus. a major recipe for a successful ministry. .pdf" download="">Download PDF</a>
+              </div> -->
+      
+              </div>
+              </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="socia-link"> 
+        <h5>Follow Us On</h5>
+        <a href="https://www.facebook.com/abah.emmanuel.7946281"><img src="images/facebook.jpg"></a>
+        <!-- <a href="https://www.instagram.com/invites/contact/?i=1rybtbqpz1vjk&utm_content=h8splz9"><img src="images/instagram.jpg"></a> -->
+        <a href="https://t.me/abahNuel"><img src="images/telegram.png"></a>
+        <!-- <a href="https://youtube.com/channel/UCsFHk2cdEkkt-XPu147pTIA"><img src="images/real2-youtube.png"></a> -->
+    </div>
+
+
+
+
+    
+
+
+<script>
+     var menuList = document.getElementById("menuList");
+
+menuList.style.maxHeight = "0px";
+
+function togglemenu(){
+    if( menuList.style.maxHeight == "0px")
+        {
+            menuList.style.maxHeight = "170px";
+        }
+    else    
+        {
+            menuList.style.maxHeight = "0px";
+        }
+}
+</script>
+
+
+
+</body>
+</html>
