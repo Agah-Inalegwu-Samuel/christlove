@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>christlove/audio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+       .slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  max-height: 50%;
+}
+.Containers {
+  display: none;
+}
+
+.Back, .forward {
+  cursor: pointer;
+  position: absolute;
+  top: 48%;
+  width: auto;
+  margin-top: -23px;
+  padding: 17px;
+  color: grey;
+  font-weight: bold;
+  font-size: 19px;
+  transition: 0.4s ease;
+  border-radius: 0 5px 5px 0;
+  user-select: none;
+}
+
+.forward {
+  right: 0;
+  border-radius: 4px 0 0 4px;
+}
+
+.Back:hover, .forward:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.Info {
+  color: #e3e3e3;
+  font-size: 16px;
+  padding: 10px 14px;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.MessageInfo {
+  color: #f2f2f3;
+  font-size: 14px;
+  padding: 10px 14px;
+  position: absolute;
+  top: 0;
+}
+
+.dots {
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  margin: 0 3px;
+  background-color: #acc;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+}
+
+.enable, .dots:hover {
+  background-color: #717161;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.4s;
+  animation-name: fade;
+  animation-duration: 1.4s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .5}
+  to {opacity: 2}
+}
+
+@keyframes fade {
+  from {opacity: .5}
+  to {opacity: 2}
+}
+.container{
+    width: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: #e3e3e3;
+}
+.Containers img{
+  height: 110vh;
+  width: 100%;
+}
+.sermon1{
+   display: block;
+}
+.sermon1 h2{
+    font-family: 'Courier New', Courier, monospace;
+    padding-top: 20px;
+    text-align: center;
+}
+.overall{
+    background-color: white;
+}
+.overall h5{
+    display: block;
+    font-family: Garamond, serif ;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+.sermon1:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.column{
+    float: left;
+    width: 50%;
+}
+.column img{
+    height: 70vh;
+  width: 98%;
+  padding-top: 10px;
+}
+.pops{
+    font-size: 120px;
+    letter-spacing: 3px;
+}
+.you-may h3{
+    padding-top: 40px;
+    padding-bottom: 20px;
+    margin-left: 10px;
+    font-family: 'Times New Roman';
+    font-size: 25px;
+}
+.you-may p{
+    margin-left: 20px;
+}
+.optionli p a{
+    font-family: 'Times New Roman';
+    font-size: 20px;
+    margin-left: 20px;
+    text-decoration: none;
+    color: blue;
+
+}
+
+
+
+
+
+.socia-link img{
+        height: 25px;
+        margin: 20px;
+        cursor: pointer;
+   }
+   .socia-link{
+       text-align: center;
+       background: linear-gradient(rgb(11, 4, 22), #200036);
+       color: white;
+       margin-top: 20px;
+   }
+   .socia-link h5, a{
+       padding-top: 20px;
+       text-decoration: none;
+       color: white;
+   }
+   .flex{
+    list-style: none;
+    display: flex;
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.flex img{
+    max-width: 100%;
+    max-height: 70vh;
+    margin: 10px;
+    text-align: center;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.flexbox h5{
+    margin-bottom: 10px;
+}
+.flexbox a{
+    background-color: #002b57;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    padding: .8em 2em;
+    width: unset;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+            /* border: 0;
+            padding: 10px 30px;
+            background: #045c69;
+            font-size: 18px;
+            border-radius: 5px;
+            color: #fff;
+            margin-bottom: 30px;
+            width: 20%;
+            text-decoration: none; */
+}
+.flexbox a:hover{
+    background-color: #c47208;
+    transition: 0.5s;
+}
+.las-1 img{
+    max-width: 500vw;
+    height: 300vh;
+    width: 90%;
+}
+.las-2 img{
+    max-width: 500vw;
+    height: 300vh;
+    width: 90%;
+}
+.las-2 a{
+    border: 0;
+    padding: 10px 30px;
+    background: #86b0b6;
+    font-size: 18px;
+    border-radius: 5px;
+    color: #fff;
+    margin-left: 7%;
+}
+.las-3 img{
+    max-width: 500vw;
+    height: 300vh;
+    width: 90%;
+}
+.music h2{
+    text-align: center;
+    font-family: 'Times New Roman';
+    font-size: 20px;
+}
+
+
+
+@media only screen and (max-width:700px){
+    .sermon1{
+    display: block;
+    text-align: center;
+}
+.column{
+    float: initial;
+    width: 100%;
+}
+.sermon1:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.pops{
+    display: block;
+    font-family: Garamond, serif ;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    letter-spacing: 0px;
+    padding-top: 0;
+}
+.column img{
+    height: 70vh;
+  width: 98%;
+  padding-top: 10px;
+}
+.optionli p a{
+    font-family: 'Times New Roman';
+    font-size: 20px;
+    margin-left: 20px;
+    text-decoration: none;
+    color: blue;
+}
+.navbar{
+    height: 16vh;
+}
+.flex{
+    list-style: none;
+    display: list-item;
+    text-align: center;
+}
+.flex img{
+    max-width: 90%;
+    max-height: 70vh;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.flexbox h5{
+    margin-bottom: 10px;
+}
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <a href="index.html"><img src="images/6.png" class="logo"></a>
+
+            <h2 class="title1">CHRIST <span>LOVE</span></h2>
+            <nav>
+                <ul id="menuList">
+                    <li><a href="index.html">HOME</a></li>
+                  <li><a href="audio.html">AUDIO</a></li>
+                    <!-- <li><a href="e-books.html">CONTENTS</a></li> -->
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+                <h2></h2>
+            </nav>
+            <img src="images/meni-icon.jpg" class="menu-icon" onclick="togglemenu()">
+        </div>
+
+        <div class="heading">
+            <!-- <hr color="darkred" size="5"> -->
+            <h2>CHRIST <span>LOVE</span> </h2>
+            <h5>...REJUVENATING MUSIC EXPERIENCE</h5>
+        </div>
+        <div class="media-plus">
+            <h5>...REJUVENATING MUSIC EXPERIENCE</h5>
+        </div>
+
+
+        
+        <div class="slideshow-container fade">
+
+            <div class="Containers">
+              <div class="MessageInfo">1 / 3</div>
+              <div class="img"><img src="images/6.png"></div>
+            </div>
+          
+            <div class="Containers">
+              <div class="MessageInfo">2 / 3</div>
+              <div class="img"><img src="images/Felix Pato ft. Enoch D1.jpg"></div>
+            </div>
+          
+            <div class="Containers">
+              <div class="MessageInfo">3 / 3</div>
+              <div class="img"><img src="images/bigger everyday.jpg"></div>
+            </div>
+          
+            <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>
+          
+          <div style="text-align:center">
+            <span class="dots" onclick="currentSlide(1)"></span>
+            <span class="dots" onclick="currentSlide(2)"></span>
+            <span class="dots" onclick="currentSlide(3)"></span>
+          </div> 
+
+
+
+
+
+
+
+
+
+<div class="overall">
+
+
+
+
+    <div class="sermon1234">
+        <div class="column1234">
+            <img src="images/Felix Pato ft. Enoch D1.jpg">
+        </div>
+            
+              <div class="column1234, pops1234">
+                        <div class="pops1234">
+                          <h3>PRAISE PARTY</h3><br>     
+                            <h5>             
+                              I will praise the name of God with a song, I will magnify him with thanksgiving.(Psalm 69:30) <br><br>Praise_Party is better described as gratitude sound. A song inspired by the biblical account of king David. A song of praise acknowleging God's unfailing love, mercy, and grace. <br><br>
+                              
+                              Download and Listen below.
+                            </h5>
+                        </div>
+              <div class="las-2">
+                    <!-- <h5>BIGGER EVERYDAY</h5> -->
+                    <audio src="music/Praise-party by Felix Pato ft Enoch D1 .mp3" controls></audio><br><br>
+                    <a href="music/Praise-party by Felix Pato ft Enoch D1 .mp3" download="">Download</a>
+              </div>
+              <!-- <div class="pdf">
+              <a href="e-book/Focus. a major recipe for a successful ministry. .pdf" download="">Download PDF</a>
+              </div> -->
+      
+              </div>
+      
+      </div>
+                    
+                                   
+      <div class="sermon12345">
+        <div class="column12345">
+            <img src="images/Wherever-He-Leads-Ill-Go-A-Daniels-mp3-image.png">
+        </div>
+            
+              <div class="column12345, pops12345">
+                        <div class="pops12345">
+                          <h3>WHEREVER HE LEADS I’LL GO – A. Daniels on Hymnspiration</h3><br>     
+                            <h5>             
+                              A Daniel, a gospel minister releases the first featured hymn for the month of December on The Hymnspiration Project. The title of the featured hymn is WHEREVER HE LEADS I’LL GO.
+      
+                              The Hymnspiration project features a monthly record release of sections from gospel hymns by A. Daniels and other gospel ministers. <br><br>
+                              
+                              Download and Listen below.
+                            </h5>
+                        </div>
+              <div class="las-2">
+                    <!-- <h5>BIGGER EVERYDAY</h5> -->
+                    <audio src="music/Wherever-He-Leads-Ill-Go-A.-Daniels.mp3" controls></audio><br><br>
+                    <a href="music/Wherever-He-Leads-Ill-Go-A.-Daniels.mp3" download="">Download</a>
+              </div>
+              <!-- <div class="pdf">
+              <a href="e-book/Focus. a major recipe for a successful ministry. .pdf" download="">Download PDF</a>
+              </div> -->
+      
+              </div>
+      
+      </div>
+                                                    
+                                
+                                            
+
+
+
+                                                                    
+
+      <div class="sermon123456">
+        <div class="column123456">
+            <img src="images/Its-Gonna-Be-Okay-Cover-Art.png">
+        </div>
+            
+              <div class="column123456, pops123456">
+                        <div class="pops123456">
+                          <h3>IT’S GONNA BE OKAY - A. Daniels</h3><br>     
+                            <h5>             
+                              A. Daniels a gospel minister has brought to us another powerful and soul lifting track titled “IT’S GONNA BE OKAY“
+      
+                              It’s Gonna Be Okay is a song that informs and reminds us that it’s going to be okay no matter what we’re going through and what life presents.
+                              
+                              
+                              Say to other’s that it’s gonna be okay by sharing this song with as many as you can. Let’s spread the word of encouragement to the world today. <br><br>
+                              
+                              Download mp3 song and video below:
+                            </h5>
+                        </div>
+              <div class="las-2">
+                    <!-- <h5>BIGGER EVERYDAY</h5> -->
+                    <audio src="music/A.-Daniels-Its-Gonna-Be-Okay.mp3" controls></audio><br><br>
+                    <a href="music/A.-Daniels-Its-Gonna-Be-Okay.mp3" download="">Download</a>
+              </div>
+              <!-- <div class="pdf">
+              <a href="e-book/Focus. a major recipe for a successful ministry. .pdf" download="">Download PDF</a>
+              </div> -->
+      
+              </div>
+      
+      </div>
+                                                                
+
+                
+                
+
+
+
+      <div class="sermon123">
+        <div class="column123">
+            <img src="images/bigger everyday.jpg">
+        </div>
+            
+              <div class="column123, pops123">
+                        <div class="pops123">
+                          <h3>   BIGGER EVERYDAY - Moses Bliss ft Temple, Uwa, Festizie, Membrane, Chris Heaven.</h3><br>     
+                            <h5>             
+                                Renowned Nigerian artist Moses Bliss has released this net-breaking sound alongside other renowned artist<br>
+    
+                                Bigger Everyday Is a song that ensures the presence of God in our life which makes a unstopable no matter what we face. We indeed unstopable. <br>
+    
+                                Download and Listen below.
+                            </h5>
+                        </div>
+              <div class="las-2">
+                    <!-- <h5>BIGGER EVERYDAY</h5> -->
+                    <audio src="music/bigger everyday.mp3" controls></audio><br><br>
+                    <a href="music/bigger everyday.mp3" download="">Download</a>
+              </div>
+              <!-- <div class="pdf">
+              <a href="e-book/Focus. a major recipe for a successful ministry. .pdf" download="">Download PDF</a>
+              </div> -->
+    
+              </div>
+    
+    </div>
+
+
+
+
+
+
+
+    <div class="sermon12">
+        <div class="column12">
+            <img src="images/ON MY WAY TO DESTINY.jpg">
+        </div>
+            
+              <div class="column12, pops12">
+                        <div class="pops12">
+                          <h3>ON MY WAY TO DESTINY - Dr. Paul Enenche.</h3><br>     
+                            <h5>             
+                                Dr. Paul Enenche is a passionate singer and Minister of the word of the Gospel of christ, His Sonng <strong>ON MY WAY TO DESTINY</strong> is a enphasizes the fact that we’re pilgrims pressing towards the mark and though we go through the ways unknown God's mercy will go still guide us. <br><br>
+    
+                                Download and Listen below.
+                            </h5>
+                        </div>
+              <div class="las-2">
+                    <!-- <h5>Onye-Di ka Gi</h5> -->
+                          <audio src="music/On-My-Way-To-My-Destiny-mp3-by-Dr.-Paul-Enenche-.mp3" controls></audio><br><br>
+                    <a href="music/On-My-Way-To-My-Destiny-mp3-by-Dr.-Paul-Enenche-.mp3" download="">Download</a>
+              </div>
+              <!-- <div class="pdf">
+              <a href="e-book/Focus. a major recipe for a successful ministry. .pdf" download="">Download PDF</a>
+              </div> -->
+    
+              </div>
+    
+    </div>
+
+
+
+
+    <div class="column1">
+        <img src="images/onye di ka gi.jpg">
+    </div>
+        
+          <div class="column1, pops1">
+                    <div class="pops1">
+                      <h3>ONYEDIKAGI (Who is like you)- Victor Ugwu.</h3><br>     
+                        <h5>             
+                          ONYEDIKAGI (Who is like you) Onyedikagi means, who is like you? It is a song that declares that there is none like God (Exodus 15:11) A song born out of the word and deep encounter with divinity. <br>
+                          There is none like our God. So, he deserves our Praise. <br><br>
+                          Download and Listen below.
+                        </h5>
+                    </div>
+          <div class="las-2">
+                <!-- <h5>Onye-Di ka Gi</h5> -->
+                      <audio src="music/Victor Ugwu_Onye Dika Gi.mp3" controls></audio><br><br>
+                <a href="music/Victor Ugwu_Onye Dika Gi.mp3" download="">Download</a>
+          </div>
+          <!-- <div class="pdf">
+          <a href="e-book/Focus. a major recipe for a successful ministry. .pdf" download="">Download PDF</a>
+          </div> -->
+
+                    
+          </div>
+
+</div>
+
+
+
+
+                                <!-- <div class="you-may">
+                                    <h3>You May Also Want To Read</h3>
+                                    <p>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>></p>
+
+                                </div>
+
+                                    <div class="optionli">
+                                        <p><a href="avoid-distractions.html">AVOID DISTRACTIONS</a></p>
+                                        <p><a href="divine-evidence.html">DIVINE EVIDENCE</a></p>
+                                        <p><a href="true-servanthood.html">TRUE SERVANTHOOD</a></p>
+                                        <p><a href="undercover.html">UNDERCOVER.</a></p>
+                                        <p><a href="the-love-of-christ.html">THE LOVE OF CHRIST</a></p>
+                                        <p><a href="single-sisters.html">Dedicated To Our Single Brothers And Sisters.</a></p>
+                                        <p><a href="read-through.html">I write with so much love and concern! (Read through).</a> </p>
+                                        <p><a href="gospel-of-the-kingdom.html">THE GOSPEL OF THE KINGDOM!</a></p>
+                                    </div> -->
+                                   
+                                                                                                    
+
+        <div class="socia-link"> 
+             <h5>Follow Us On</h5>
+                    <a href="https://web.facebook.com/profile.php?id=100089631876434&is_tour_dismissed=true"><img src="images/facebook.jpg"></a>
+                    <a href="#"><img src="images/telegram.png"></a>
+        </div>
+                                    
+
+
+<script>
+     var menuList = document.getElementById("menuList");
+
+menuList.style.maxHeight = "0px";
+
+function togglemenu(){
+    if( menuList.style.maxHeight == "0px")
+        {
+            menuList.style.maxHeight = "170px";
+        }
+    else    
+        {
+            menuList.style.maxHeight = "0px";
+        }
+}
+
+
+
+var slidePosition = 1;
+SlideShow(slidePosition);
+
+function plusSlides(n) {
+SlideShow(slidePosition += n);
+}
+
+function currentSlide(n) {
+SlideShow(slidePosition = n);
+}
+
+function SlideShow(n) {
+var i;
+var slides = document.getElementsByClassName("Containers");
+var circles = document.getElementsByClassName("dots");
+if (n > slides.length) {slidePosition = 1}
+if (n < 1) {slidePosition = slides.length}
+for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+}
+for (i = 0; i < circles.length; i++) {
+    circles[i].className = circles[i].className.replace(" enable", "");
+}
+slides[slidePosition-1].style.display = "block";
+circles[slidePosition-1].className += " enable";
+} 
+var slidePosition = 0;
+SlideShow();
+
+function SlideShow() {
+var i;
+var slides = document.getElementsByClassName("Containers");
+for (i = 0; i < slides.length; i++) {
+  slides[i].style.display = "none";
+}
+slidePosition++;
+if (slidePosition > slides.length) {slidePosition = 1}
+slides[slidePosition-1].style.display = "block";
+setTimeout(SlideShow, 5000);
+} 
+Testing
+</script>
+
+
+
+</body>
+</html>
