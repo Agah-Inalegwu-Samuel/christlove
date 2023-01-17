@@ -509,7 +509,7 @@ button{
 
 
 .sermon12{
-    margin-bottom: 10%;
+    margin-bottom: 15%;
 }
 .column12{
     float: left;
@@ -571,7 +571,7 @@ button{
 
 
 .sermon1234{
-    margin-top: 10%;
+    margin-top: 15%;
 }
 .column1234{
     float: left;
@@ -580,7 +580,7 @@ button{
 .column1234 img{
     height: 70vh;
     width: 98%;
-    padding-top: 60px;
+    padding-top: 30px;
 }
 .pops1234{
     font-size: 25px;
